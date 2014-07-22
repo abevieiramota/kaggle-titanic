@@ -1,0 +1,14 @@
+nome,tipo,missing,descrição,observações
+Age,inteiro,true,"Age is in Years; Fractional if Age less than One (1) If the Age is Estimated, it is in the form xx.5)",
+Cabin,string,true,Cabin,
+Embarked,categorico,true,Port of Embarkation (C = Cherbourg; Q = Queenstown; S = Southampton),
+Fare,inteiro,false,Passenger Fare,Qual unidade de medida?
+Name,string,false,Nome das pessoas,Qual o formato?
+Parch,inteiro,false,Number of Parents/Children Aboard,"Parent: Mother or Father of Passenger Aboard Titanic
+Child: Son, Daughter, Stepson, or Stepdaughter of Passenger Aboard Titanic"
+Pclass,categorico,false,Pclass is a proxy for socio-economic status (SES) 1: Upper; 2: Middle; 3: Lower,
+Sex,categorico,false,Gênero,"Não, não é a quantidade de relações sexuais que a pessoa teve na viagem..."
+SibSp,inteiro,false,Number of Siblings/Spouses Aboard,"Sibling: Brother, Sister, Stepbrother, or Stepsister of Passenger Aboard Titanic
+Spouse: Husband or Wife of Passenger Aboard Titanic (Mistresses and Fiances Ignored)"
+Survived,categorico,false,Se a pessoa sobreviveu(valor=1) ou não(valor=0),
+Ticket,string,false,Ticket Number,
