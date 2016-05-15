@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <transformation>
   <info>
-    <name>Gera features v1</name>
+    <name>New features</name>
     <description/>
     <extended_description/>
     <trans_version/>
@@ -9,6 +9,16 @@
     <trans_status>0</trans_status>
     <directory>&#x2f;</directory>
     <parameters>
+        <parameter>
+            <name>train_clean_filename</name>
+            <default_value/>
+            <description/>
+        </parameter>
+        <parameter>
+            <name>train_final_filename</name>
+            <default_value/>
+            <description/>
+        </parameter>
     </parameters>
     <log>
 <trans-log-table><connection/>
@@ -67,39 +77,76 @@
     <clusterschemas>
     </clusterschemas>
   <created_user>-</created_user>
-  <created_date>2016&#x2f;05&#x2f;15 10&#x3a;30&#x3a;56.920</created_date>
+  <created_date>2016&#x2f;05&#x2f;15 15&#x3a;49&#x3a;03.085</created_date>
   <modified_user>-</modified_user>
-  <modified_date>2016&#x2f;05&#x2f;15 10&#x3a;30&#x3a;56.920</modified_date>
-    <key_for_session_key>H4sIAAAAAAAAAAMAAAAAAAAAAAA&#x3d;</key_for_session_key>
+  <modified_date>2016&#x2f;05&#x2f;15 15&#x3a;49&#x3a;03.085</modified_date>
+    <key_for_session_key/>
     <is_key_private>N</is_key_private>
   </info>
   <notepads>
+    <notepad>
+      <note>Calcula Title e TitleClass</note>
+      <xloc>144</xloc>
+      <yloc>224</yloc>
+      <width>138</width>
+      <heigth>26</heigth>
+      <fontname>Segoe UI</fontname>
+      <fontsize>9</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
+    <notepad>
+      <note>Calcula FamilySize</note>
+      <xloc>144</xloc>
+      <yloc>384</yloc>
+      <width>108</width>
+      <heigth>26</heigth>
+      <fontname>Segoe UI</fontname>
+      <fontsize>9</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
   </notepads>
   <order>
-  <hop> <from>CSV file input - train.csv</from><to>Sort rows</to><enabled>Y</enabled> </hop>
-  <hop> <from>Sort rows</from><to>Group by</to><enabled>Y</enabled> </hop>
-  <hop> <from>CSV file input - train.csv</from><to>Filter rows - Age is null</to><enabled>Y</enabled> </hop>
-  <hop> <from>Filter rows - Age is null</from><to>Stream lookup</to><enabled>Y</enabled> </hop>
-  <hop> <from>Group by</from><to>Stream lookup</to><enabled>Y</enabled> </hop>
-  <hop> <from>Filter rows - Age is null</from><to>Dummy &#x28;do nothing&#x29;</to><enabled>Y</enabled> </hop>
-  <hop> <from>Stream lookup</from><to>Set field value</to><enabled>Y</enabled> </hop>
-  <hop> <from>Set field value</from><to>Select values</to><enabled>Y</enabled> </hop>
-  <hop> <from>Select values</from><to>Dummy &#x28;do nothing&#x29;</to><enabled>Y</enabled> </hop>
-  <hop> <from>Dummy &#x28;do nothing&#x29;</from><to>If field value is null</to><enabled>Y</enabled> </hop>
-  <hop> <from>If field value is null</from><to>Text file output</to><enabled>Y</enabled> </hop>
+  <hop> <from>CSV file input - clean train</from><to>Regex Evaluation - get Title</to><enabled>Y</enabled> </hop>
+  <hop> <from>Regex Evaluation - get Title</from><to>Select values - remove hasTitle</to><enabled>Y</enabled> </hop>
+  <hop> <from>Select values - remove hasTitle</from><to>Stream lookup</to><enabled>Y</enabled> </hop>
+  <hop> <from>CSV file input - map_Title_class</from><to>Stream lookup</to><enabled>Y</enabled> </hop>
+  <hop> <from>Stream lookup</from><to>Calculator</to><enabled>Y</enabled> </hop>
+  <hop> <from>Calculator</from><to>Text file output</to><enabled>Y</enabled> </hop>
   </order>
   <step>
-    <name>CSV file input - train.csv</name>
+    <name>CSV file input - clean train</name>
     <type>CsvInput</type>
     <description/>
-    <distribute>N</distribute>
+    <distribute>Y</distribute>
     <custom_distribution/>
     <copies>1</copies>
          <partitioning>
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <filename>&#x24;&#x7b;Internal.Transformation.Filename.Directory&#x7d;&#x2f;..&#x2f;data&#x2f;train.csv</filename>
+    <filename>&#x24;&#x7b;train_clean_filename&#x7d;</filename>
     <filename_field/>
     <rownum_field/>
     <include_filename>N</include_filename>
@@ -248,15 +295,15 @@
     </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>160</xloc>
-      <yloc>224</yloc>
+      <xloc>368</xloc>
+      <yloc>48</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
 
   <step>
-    <name>Dummy &#x28;do nothing&#x29;</name>
-    <type>Dummy</type>
+    <name>Regex Evaluation - get Title</name>
+    <type>RegexEval</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -265,125 +312,42 @@
            <method>none</method>
            <schema_name/>
            </partitioning>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>528</xloc>
-      <yloc>224</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>Filter rows - Age is null</name>
-    <type>FilterRows</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-<send_true_to>Stream lookup</send_true_to>
-<send_false_to>Dummy &#x28;do nothing&#x29;</send_false_to>
-    <compare>
-<condition>
- <negated>N</negated>
- <leftvalue>Age</leftvalue>
- <function>IS NULL</function>
- <rightvalue/>
- </condition>
-    </compare>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>336</xloc>
-      <yloc>224</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>Group by</name>
-    <type>GroupBy</type>
-    <description/>
-    <distribute>N</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-      <all_rows>N</all_rows>
-      <ignore_aggregate>N</ignore_aggregate>
-      <field_ignore/>
-      <directory>&#x25;&#x25;java.io.tmpdir&#x25;&#x25;</directory>
-      <prefix>grp</prefix>
-      <add_linenr>N</add_linenr>
-      <linenr_fieldname/>
-      <give_back_row>N</give_back_row>
-      <group>
-        <field>
-          <name>Pclass</name>
-        </field>
-      </group>
-      <fields>
-        <field>
-          <aggregate>FarePclass</aggregate>
-          <subject>Fare</subject>
-          <type>AVERAGE</type>
-          <valuefield/>
-        </field>
-        <field>
-          <aggregate>AgePclass</aggregate>
-          <subject>Age</subject>
-          <type>AVERAGE</type>
-          <valuefield/>
-        </field>
-      </fields>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>336</xloc>
-      <yloc>16</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>If field value is null</name>
-    <type>IfNull</type>
-    <description/>
-    <distribute>Y</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-      <replaceAllByValue/>
-      <replaceAllMask/>
-      <selectFields>Y</selectFields>
-      <selectValuesType>N</selectValuesType>
-      <setEmptyStringAll>N</setEmptyStringAll>
-    <valuetypes>
-      </valuetypes>
+    <script><![CDATA[.*\s([A-Za-z]+)\..*]]></script>    <matcher>Name</matcher>
+    <resultfieldname>hasTitle</resultfieldname>
+    <usevar>N</usevar>
+    <allowcapturegroups>Y</allowcapturegroups>
+    <replacefields>N</replacefields>
+    <canoneq>N</canoneq>
+    <caseinsensitive>N</caseinsensitive>
+    <comment>N</comment>
+    <dotall>N</dotall>
+    <multiline>N</multiline>
+    <unicode>N</unicode>
+    <unix>N</unix>
     <fields>
       <field>
-        <name>Embarked</name>
-        <value>S</value>
-        <mask/>
-        <set_empty_string>N</set_empty_string>
-        </field>
-      </fields>
+        <name>Title</name>
+        <type>String</type>
+        <format/>
+        <group/>
+        <decimal/>
+        <length>10</length>
+        <precision>-1</precision>
+        <nullif/>
+        <ifnull/>
+        <trimtype>none</trimtype>
+      </field>
+    </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>672</xloc>
-      <yloc>224</yloc>
+      <xloc>368</xloc>
+      <yloc>208</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
 
   <step>
-    <name>Select values</name>
+    <name>Select values - remove hasTitle</name>
     <type>SelectValues</type>
     <description/>
     <distribute>Y</distribute>
@@ -394,18 +358,18 @@
            <schema_name/>
            </partitioning>
     <fields>        <select_unspecified>N</select_unspecified>
-      <remove>        <name>AgePclass</name>
+      <remove>        <name>hasTitle</name>
       </remove>    </fields>     <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>528</xloc>
-      <yloc>128</yloc>
+      <xloc>560</xloc>
+      <yloc>208</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
 
   <step>
-    <name>Set field value</name>
-    <type>SetValueField</type>
+    <name>CSV file input - map_Title_class</name>
+    <type>CsvInput</type>
     <description/>
     <distribute>Y</distribute>
     <custom_distribution/>
@@ -414,50 +378,47 @@
            <method>none</method>
            <schema_name/>
            </partitioning>
+    <filename>&#x24;&#x7b;Internal.Transformation.Filename.Directory&#x7d;&#x5c;map_Title_class.csv</filename>
+    <filename_field/>
+    <rownum_field/>
+    <include_filename>N</include_filename>
+    <separator>,</separator>
+    <enclosure>&#x22;</enclosure>
+    <header>Y</header>
+    <buffer_size>50000</buffer_size>
+    <lazy_conversion>Y</lazy_conversion>
+    <add_filename_result>N</add_filename_result>
+    <parallel>N</parallel>
+    <newline_possible>N</newline_possible>
+    <encoding>UTF-8</encoding>
     <fields>
       <field>
-        <name>Age</name>
-        <replaceby>AgePclass</replaceby>
-        </field>
-      </fields>
-     <cluster_schema/>
- <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>448</xloc>
-      <yloc>128</yloc>
-      <draw>Y</draw>
-      </GUI>
-    </step>
-
-  <step>
-    <name>Sort rows</name>
-    <type>SortRows</type>
-    <description/>
-    <distribute>N</distribute>
-    <custom_distribution/>
-    <copies>1</copies>
-         <partitioning>
-           <method>none</method>
-           <schema_name/>
-           </partitioning>
-      <directory>&#x25;&#x25;java.io.tmpdir&#x25;&#x25;</directory>
-      <prefix>out</prefix>
-      <sort_size>1000000</sort_size>
-      <free_memory/>
-      <compress>N</compress>
-      <compress_variable/>
-      <unique_rows>N</unique_rows>
-    <fields>
+        <name>Title</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
+      </field>
       <field>
-        <name>Pclass</name>
-        <ascending>Y</ascending>
-        <case_sensitive>N</case_sensitive>
-        <presorted>N</presorted>
+        <name>class</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <length>-1</length>
+        <precision>-1</precision>
+        <trim_type>none</trim_type>
       </field>
     </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>160</xloc>
-      <yloc>16</yloc>
+      <xloc>704</xloc>
+      <yloc>64</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -473,27 +434,88 @@
            <method>none</method>
            <schema_name/>
            </partitioning>
-    <from>Group by</from>
+    <from>CSV file input - map_Title_class</from>
     <input_sorted>N</input_sorted>
     <preserve_memory>Y</preserve_memory>
     <sorted_list>N</sorted_list>
     <integer_pair>N</integer_pair>
     <lookup>
       <key>
-        <name>Pclass</name>
-        <field>Pclass</field>
+        <name>Title</name>
+        <field>Title</field>
       </key>
       <value>
-        <name>AgePclass</name>
-        <rename>AgePclass</rename>
+        <name>class</name>
+        <rename>TitleClass</rename>
         <default/>
-        <type>None</type>
+        <type>String</type>
       </value>
     </lookup>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>336</xloc>
-      <yloc>128</yloc>
+      <xloc>704</xloc>
+      <yloc>208</yloc>
+      <draw>Y</draw>
+      </GUI>
+    </step>
+
+  <step>
+    <name>Calculator</name>
+    <type>Calculator</type>
+    <description/>
+    <distribute>Y</distribute>
+    <custom_distribution/>
+    <copies>1</copies>
+         <partitioning>
+           <method>none</method>
+           <schema_name/>
+           </partitioning>
+       <calculation><field_name>Um</field_name>
+<calc_type>CONSTANT</calc_type>
+<field_a>1</field_a>
+<field_b/>
+<field_c/>
+<value_type>Integer</value_type>
+<value_length>-1</value_length>
+<value_precision>-1</value_precision>
+<remove>Y</remove>
+<conversion_mask/>
+<decimal_symbol/>
+<grouping_symbol/>
+<currency_symbol/>
+</calculation>
+       <calculation><field_name>Parch_mais_Um</field_name>
+<calc_type>ADD</calc_type>
+<field_a>Um</field_a>
+<field_b>Parch</field_b>
+<field_c/>
+<value_type>Integer</value_type>
+<value_length>-1</value_length>
+<value_precision>-1</value_precision>
+<remove>Y</remove>
+<conversion_mask/>
+<decimal_symbol/>
+<grouping_symbol/>
+<currency_symbol/>
+</calculation>
+       <calculation><field_name>FamilySize</field_name>
+<calc_type>ADD</calc_type>
+<field_a>Parch_mais_Um</field_a>
+<field_b>SibSp</field_b>
+<field_c/>
+<value_type>Integer</value_type>
+<value_length>-1</value_length>
+<value_precision>-1</value_precision>
+<remove>N</remove>
+<conversion_mask/>
+<decimal_symbol/>
+<grouping_symbol/>
+<currency_symbol/>
+</calculation>
+     <cluster_schema/>
+ <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
+      <xloc>368</xloc>
+      <yloc>400</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
@@ -523,11 +545,11 @@
     <fileNameField/>
     <create_parent_folder>Y</create_parent_folder>
     <file>
-      <name>&#x24;&#x7b;Internal.Transformation.Filename.Directory&#x7d;&#x5c;..&#x5c;data&#x5c;train - &#x24;&#x7b;Internal.Transformation.Name&#x7d;</name>
+      <name>&#x24;&#x7b;train_final_filename&#x7d;</name>
       <is_command>N</is_command>
       <servlet_output>N</servlet_output>
       <do_not_open_new_file_init>N</do_not_open_new_file_init>
-      <extention>csv</extention>
+      <extention/>
       <append>N</append>
       <split>N</split>
       <haspartno>N</haspartno>
@@ -685,11 +707,47 @@
         <length>-1</length>
         <precision>-1</precision>
       </field>
+      <field>
+        <name>Title</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>both</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>TitleClass</name>
+        <type>String</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>both</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>FamilySize</name>
+        <type>Integer</type>
+        <format>0</format>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>both</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
     </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
-      <xloc>800</xloc>
-      <yloc>224</yloc>
+      <xloc>704</xloc>
+      <yloc>400</yloc>
       <draw>Y</draw>
       </GUI>
     </step>
