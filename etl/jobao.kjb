@@ -84,19 +84,19 @@
             <parameter>            <name>train_filename</name>
             <stream_name/>
             <value>&#x24;&#x7b;train_filename&#x7d;</value>
-            </parameter>            <parameter>            <name>train_clean_filename</name>
-            <stream_name/>
-            <value>&#x24;&#x7b;train_clean_filename&#x7d;</value>
             </parameter>            <parameter>            <name>embarked_default_value</name>
             <stream_name/>
             <value>&#x24;&#x7b;embarked_default_value&#x7d;</value>
-            </parameter>            <parameter>            <name>mean_Age_Pclass_filename</name>
+            </parameter>            <parameter>            <name>train_final_filename</name>
             <stream_name/>
-            <value>&#x24;&#x7b;mean_Age_Pclass_filename&#x7d;</value>
+            <value>&#x24;&#x7b;train_final_filename&#x7d;</value>
+            </parameter>            <parameter>            <name>test_filename</name>
+            <stream_name/>
+            <value>&#x24;&#x7b;test_filename&#x7d;</value>
             </parameter>      </parameters>      <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>320</xloc>
+      <xloc>304</xloc>
       <yloc>160</yloc>
       </entry>
     <entry>
@@ -113,18 +113,8 @@
           <variable_type>JVM</variable_type>
         </field>
         <field>
-          <variable_name>train_clean_filename</variable_name>
-          <variable_value>&#x24;&#x7b;Internal.Job.Filename.Directory&#x7d;&#x5c;..&#x5c;data&#x5c;train_clean.csv</variable_value>
-          <variable_type>JVM</variable_type>
-        </field>
-        <field>
           <variable_name>embarked_default_value</variable_name>
           <variable_value>S</variable_value>
-          <variable_type>JVM</variable_type>
-        </field>
-        <field>
-          <variable_name>mean_Age_Pclass_filename</variable_name>
-          <variable_value>&#x24;&#x7b;Internal.Job.Filename.Directory&#x7d;&#x5c;mean_Age_Pclass</variable_value>
           <variable_type>JVM</variable_type>
         </field>
         <field>
@@ -132,50 +122,21 @@
           <variable_value>&#x24;&#x7b;Internal.Job.Filename.Directory&#x7d;&#x5c;..&#x5c;data&#x5c;train_final.csv</variable_value>
           <variable_type>JVM</variable_type>
         </field>
+        <field>
+          <variable_name>test_filename</variable_name>
+          <variable_value>&#x24;&#x7b;Internal.Job.Filename.Directory&#x7d;&#x5c;..&#x5c;data&#x5c;test.csv</variable_value>
+          <variable_type>JVM</variable_type>
+        </field>
+        <field>
+          <variable_name>test_final_filename</variable_name>
+          <variable_value>&#x24;&#x7b;Internal.Job.Filename.Directory&#x7d;&#x5c;..&#x5c;data&#x5c;test_final.csv</variable_value>
+          <variable_type>JVM</variable_type>
+        </field>
       </fields>
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>176</xloc>
-      <yloc>160</yloc>
-      </entry>
-    <entry>
-      <name>New features</name>
-      <description/>
-      <type>TRANS</type>
-      <specification_method>filename</specification_method>
-      <trans_object_id/>
-      <filename>&#x24;&#x7b;Internal.Job.Filename.Directory&#x7d;&#x5c;New features.ktr</filename>
-      <transname/>
-      <arg_from_previous>N</arg_from_previous>
-      <params_from_previous>N</params_from_previous>
-      <exec_per_row>N</exec_per_row>
-      <clear_rows>N</clear_rows>
-      <clear_files>N</clear_files>
-      <set_logfile>N</set_logfile>
-      <logfile/>
-      <logext/>
-      <add_date>N</add_date>
-      <add_time>N</add_time>
-      <loglevel>Basic</loglevel>
-      <cluster>N</cluster>
-      <slave_server_name/>
-      <set_append_logfile>N</set_append_logfile>
-      <wait_until_finished>Y</wait_until_finished>
-      <follow_abort_remote>N</follow_abort_remote>
-      <create_parent_folder>N</create_parent_folder>
-      <logging_remote_work>N</logging_remote_work>
-      <parameters>        <pass_all_parameters>Y</pass_all_parameters>
-            <parameter>            <name>train_clean_filename</name>
-            <stream_name/>
-            <value>&#x24;&#x7b;train_clean_filename&#x7d;</value>
-            </parameter>            <parameter>            <name>train_final_filename</name>
-            <stream_name/>
-            <value>&#x24;&#x7b;train_final_filename&#x7d;</value>
-            </parameter>      </parameters>      <parallel>N</parallel>
-      <draw>Y</draw>
-      <nr>0</nr>
-      <xloc>464</xloc>
+      <xloc>160</xloc>
       <yloc>160</yloc>
       </entry>
     <entry>
@@ -185,7 +146,7 @@
       <parallel>N</parallel>
       <draw>Y</draw>
       <nr>0</nr>
-      <xloc>592</xloc>
+      <xloc>448</xloc>
       <yloc>160</yloc>
       </entry>
   </entries>
@@ -210,15 +171,6 @@
     </hop>
     <hop>
       <from>Cleansing</from>
-      <to>New features</to>
-      <from_nr>0</from_nr>
-      <to_nr>0</to_nr>
-      <enabled>Y</enabled>
-      <evaluation>Y</evaluation>
-      <unconditional>N</unconditional>
-    </hop>
-    <hop>
-      <from>New features</from>
       <to>Success</to>
       <from_nr>0</from_nr>
       <to_nr>0</to_nr>
@@ -228,6 +180,27 @@
     </hop>
   </hops>
   <notepads>
+    <notepad>
+      <note>limpando essa birosca, agora que percebi que esse job est&#xe1; s&#xf3; de enfeite rssssssssssssss</note>
+      <xloc>32</xloc>
+      <yloc>80</yloc>
+      <width>468</width>
+      <heigth>26</heigth>
+      <fontname/>
+      <fontsize>-1</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
   </notepads>
 
 </job>
