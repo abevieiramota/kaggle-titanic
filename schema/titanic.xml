@@ -1,0 +1,32 @@
+<Schema name="New Schema1">
+  <Cube name="Titanic" visible="true" cache="true" enabled="true">
+    <Table name="titanic" schema="public">
+    </Table>
+    <Dimension type="StandardDimension" visible="true" name="Idade">
+      <Hierarchy visible="true" hasAll="true">
+        <Level name="Idade" visible="true" column="ageclassdesc" uniqueMembers="false">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="StandardDimension" visible="true" name="Survived">
+      <Hierarchy visible="true" hasAll="true">
+        <Level name="Survived" visible="true" column="survived" uniqueMembers="false">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="StandardDimension" visible="true" name="Sexo">
+      <Hierarchy name="New Hierarchy 0" visible="true" hasAll="true">
+        <Level name="Sexo" visible="true" column="sex" uniqueMembers="false">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Dimension type="StandardDimension" visible="true" name="Dataset">
+      <Hierarchy visible="true" hasAll="true">
+        <Level name="Dataset" visible="true" column="dataset" uniqueMembers="false">
+        </Level>
+      </Hierarchy>
+    </Dimension>
+    <Measure name="Count" column="passengerid" aggregator="count" visible="true">
+    </Measure>
+  </Cube>
+</Schema>
