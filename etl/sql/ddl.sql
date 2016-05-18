@@ -21,6 +21,7 @@ CREATE TABLE titanic
   ageclass smallint,
   sexclass smallint,
   dataset character varying(10),
-  embarkedclass smallint
+  embarkedclass smallint,
+  pctSurvived smallint
 )
 ;
