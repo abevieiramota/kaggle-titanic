@@ -1,229 +1,668 @@
-familyName,pctSurvived
-Aks,100
-Albimona,100
-Andersen-Jensen,100
-Anderson,100
-Angle,100
-Appleton,100
-Asplund,75
-Astor,100
-Aubart,100
-Ayoub,100
-Baclini,100
-Ball,100
-Barah,100
-Barber,100
-Barkworth,100
-Bazzani,100
-Beane,100
-Becker,100
-Beckwith,100
-Beesley,100
-Behr,100
-Bidois,100
-Bing,100
-Bishop,100
-Bissette,100
-Bjornstrom-Steffansson,100
-Blank,100
-Bonnell,100
-Bowerman,100
-Bradley,100
-Brown,75
-Burns,100
-Buss,100
-Bystrom,100
-Calderhead,100
-Caldwell,100
-Cameron,100
-Cardeza,100
-Carr,100
-Chambers,100
-Cherry,100
-Chibnall,100
-Chip,100
-Christy,100
-Clarke,100
-Cleaver,100
-Cohen,100
-Compton,100
-Connolly,100
-Coutts,100
-Cumings,100
-Dahl,100
-Daly,100
-Daniel,100
-Davis,100
-Davison,100
-de Messemaeker,100
-de Mulder,100
-Devaney,100
-Dick,100
-Dodge,100
-Doling,100
-Dorking,100
-Dowdell,100
-Drew,100
-Duff Gordon,100
-Duran y More,100
-Emanuel,100
-Endres,100
-Eustis,100
-Faunthorpe,100
-Fleming,100
-Foo,100
-Francatelli,100
-Frauenthal,100
-Frolicher,100
-Frolicher-Stehli,100
-Garside,100
-Gilnagh,100
-Glynn,100
-Goldenberg,100
-Greenfield,100
-Hamalainen,100
-Harder,100
-Harper,75
-Hassab,100
-Hawksford,100
-Hays,100
-Healy,100
-Hedman,100
-Heikkinen,100
-Herman,100
-Hewlett,100
-Hippach,100
-Hirvonen,100
-Hogeboom,100
-Homer,100
-Honkanen,100
-Hosono,100
-Icard,100
-Ilett,100
-Jalsevac,100
-Jansson,100
-Jermyn,100
-Jerwan,100
-Johannesen-Bratthammer,100
-Jonsson,100
-Karun,100
-Kelly,75
-Kenyon,100
-Kimball,100
-Kink-Heilmann,100
-Landergren,100
-Lang,100
-Leader,100
-Leeni,100
-Lehmann,100
-Leitch,100
-Lemore,100
-LeRoy,100
-Lesurer,100
-Lindqvist,100
-Lines,100
-Longley,100
-Louch,100
-Lulic,100
-Lurette,100
-Madigan,100
-Madill,100
-Madsen,100
-Maioni,100
-Mamee,100
-Mannion,100
-Marechal,100
-Masselmani,100
-Mayne,100
-McCormack,100
-McCoy,100
-McDermott,100
-McGough,100
-McGovern,100
-McGowan,100
-Mellinger,100
-Mellors,100
-Mockler,100
-Moor,100
-Moss,100
-Moubarek,100
-Moussa,100
-Mullens,100
-Murphy,100
-Najib,100
-Nakid,100
-Newsom,100
-Nicola-Yarred,100
-Nilsson,100
-Niskanen,100
-Nye,100
-Nysten,100
-O'Driscoll,100
-O'Dwyer,100
-O'Leary,100
-Ohman,100
-Osman,100
-Padro y Manent,100
-Parrish,100
-Perreault,100
-Persson,100
-Peter,100
-Peuchen,100
-Phillips,100
-Pickard,100
-Pinsky,100
-Potter,100
-Quick,100
-Reynaldo,100
-Richards,100
-Ridsdale,100
-Robert,100
-Romaine,100
-Rothes,100
-Rothschild,100
-Rugg,100
-Ryerson,100
-Saalfeld,100
-Sagesser,100
-Salkjelsvik,100
-Sandstrom,100
-Serepeca,100
-Seward,100
-Sheerlinck,100
-Shelley,100
-Shutes,100
-Silven,100
-Silverthorne,100
-Simonius-Blumer,100
-Sinkkonen,100
-Sjoblom,100
-Slayter,100
-Sloper,100
-Spedden,100
-Spencer,100
-Stahelin-Maeglin,100
-Stephenson,100
-Stone,100
-Stranden,100
-Sunderland,100
-Sundman,100
-Swift,100
-Taylor,100
-Thomas,100
-Thorne,100
-Toomey,100
-Tornquist,100
-Touma,100
-Trout,100
-Troutt,100
-Turja,100
-Turkula,100
-Ward,100
-Warren,100
-Watt,100
-Weisz,100
-Wells,100
-Wick,100
-Wilhelms,100
-Woolner,100
-Young,100
+familyName,pctFamilySurvived,nFamilySurvived,nFamilyDied
+Abbing,0,0, 1
+Abbott,50,2, 2
+Abelson,50,2, 2
+Adahl,0,0, 1
+Adams,0,0, 1
+Ahlin,0,0, 1
+Aks,100,1, 0
+Albimona,100,1, 0
+Alexander,0,0, 1
+Alhomaki,0,0, 1
+Ali,0,0, 4
+Allen,50,2, 2
+Allison,33,3, 6
+Allum,0,0, 1
+Andersen-Jensen,100,1, 0
+Anderson,100,1, 0
+Andersson,22,18, 63
+Andreasson,0,0, 1
+Andrew,0,0, 1
+Andrews,50,2, 2
+Angle,100,1, 0
+Appleton,100,1, 0
+Arnold-Franchi,0,0, 4
+Artagaveytia,0,0, 1
+Asim,0,0, 1
+Asplund,75,12, 4
+Astor,100,1, 0
+Attalah,0,0, 4
+Aubart,100,1, 0
+Augustsson,0,0, 1
+Ayoub,100,1, 0
+Backstrom,50,2, 2
+Baclini,100,16, 0
+Badt,0,0, 1
+Bailey,0,0, 1
+Balkic,0,0, 1
+Ball,100,1, 0
+Banfield,0,0, 1
+Barah,100,1, 0
+Barbara,0,0, 4
+Barber,100,1, 0
+Barkworth,100,1, 0
+Barton,0,0, 1
+Bateman,0,0, 1
+Baumann,0,0, 1
+Baxter,50,2, 2
+Bazzani,100,1, 0
+Beane,100,4, 0
+Beavan,0,0, 1
+Becker,100,4, 0
+Beckwith,100,4, 0
+Beesley,100,1, 0
+Behr,100,1, 0
+Bengtsson,0,0, 1
+Berglund,0,0, 1
+Berriman,0,0, 1
+Betros,0,0, 1
+Bidois,100,1, 0
+Bing,100,1, 0
+Birkeland,0,0, 1
+Bishop,100,4, 0
+Bissette,100,1, 0
+Bjornstrom-Steffansson,100,1, 0
+Blackwell,0,0, 1
+Blank,100,1, 0
+Bonnell,100,1, 0
+Bostandyeff,0,0, 1
+Boulos,0,0, 9
+Bourke,0,0, 9
+Bowen,0,0, 1
+Bowerman,100,1, 0
+Bracken,0,0, 1
+Bradley,100,1, 0
+Braund,0,0, 4
+Brewe,0,0, 1
+Brocklebank,0,0, 1
+Brown,75,12, 4
+Bryhl,0,0, 1
+Burke,0,0, 1
+Burns,100,1, 0
+Buss,100,1, 0
+Butler,0,0, 1
+Butt,0,0, 1
+Byles,0,0, 1
+Bystrom,100,1, 0
+Cacic,0,0, 4
+Cairns,0,0, 1
+Calderhead,100,1, 0
+Caldwell,100,4, 0
+Calic,0,0, 4
+Cameron,100,1, 0
+Campbell,0,0, 1
+Canavan,0,0, 1
+Cann,0,0, 1
+Caram,0,0, 1
+Carbines,0,0, 1
+Cardeza,100,1, 0
+Carlsson,0,0, 4
+Carr,100,1, 0
+Carrau,0,0, 1
+Carter,66,24, 12
+Cavendish,0,0, 1
+Celotti,0,0, 1
+Chaffee,0,0, 1
+Chambers,100,4, 0
+Chapman,0,0, 4
+Charters,0,0, 1
+Cherry,100,1, 0
+Chibnall,100,1, 0
+Chip,100,1, 0
+Christmann,0,0, 1
+Christy,100,1, 0
+Chronopoulos,0,0, 1
+Clarke,100,1, 0
+Cleaver,100,1, 0
+Clifford,0,0, 1
+Coelho,0,0, 1
+Cohen,100,1, 0
+Coleff,0,0, 4
+Coleridge,0,0, 1
+Collander,0,0, 1
+Colley,0,0, 1
+Collyer,66,6, 3
+Compton,100,1, 0
+Connaghton,0,0, 1
+Connolly,100,1, 0
+Connors,0,0, 1
+Cook,0,0, 1
+Cor,0,0, 1
+Corn,0,0, 1
+Coutts,100,4, 0
+Coxon,0,0, 1
+Crease,0,0, 1
+Cribb,0,0, 1
+Crosby,50,2, 2
+Culumovic,0,0, 1
+Cumings,100,1, 0
+Cunningham,0,0, 1
+Dahl,100,1, 0
+Dahlberg,0,0, 1
+Dakic,0,0, 1
+Daly,100,4, 0
+Danbom,0,0, 4
+Daniel,100,1, 0
+Danoff,0,0, 1
+Dantcheff,0,0, 1
+Davidson,0,0, 1
+Davies,33,3, 6
+Davis,100,1, 0
+Davison,100,1, 0
+de Messemaeker,100,1, 0
+de Mulder,100,1, 0
+de Pelsmaeker,0,0, 1
+Dean,50,2, 2
+del Carlo,0,0, 1
+Denkoff,0,0, 1
+Dennis,0,0, 1
+Devaney,100,1, 0
+Dick,100,4, 0
+Dimic,0,0, 1
+Dodge,100,1, 0
+Doharr,0,0, 1
+Doling,100,4, 0
+Dooley,0,0, 1
+Dorking,100,1, 0
+Douglas,0,0, 1
+Dowdell,100,1, 0
+Downton,0,0, 1
+Drazenoic,0,0, 1
+Drew,100,1, 0
+Duane,0,0, 1
+Duff Gordon,100,4, 0
+Duran y More,100,1, 0
+Edvardsson,0,0, 1
+Eitemiller,0,0, 1
+Eklund,0,0, 1
+Ekstrom,0,0, 1
+Elias,0,0, 9
+Elsbury,0,0, 1
+Emanuel,100,1, 0
+Emir,0,0, 1
+Endres,100,1, 0
+Eustis,100,1, 0
+Fahlstrom,0,0, 1
+Farrell,0,0, 1
+Farthing,0,0, 1
+Faunthorpe,100,1, 0
+Fischer,0,0, 1
+Fleming,100,1, 0
+Flynn,33,3, 6
+Foo,100,1, 0
+Ford,0,0, 16
+Foreman,0,0, 1
+Fortune,50,8, 8
+Fox,0,0, 1
+Francatelli,100,1, 0
+Frauenthal,100,4, 0
+Frolicher,100,1, 0
+Frolicher-Stehli,100,1, 0
+Frost,0,0, 1
+Fry,0,0, 1
+Funk,0,0, 1
+Futrelle,50,2, 2
+Fynney,0,0, 1
+Gale,0,0, 1
+Gallagher,0,0, 1
+Garfirth,0,0, 1
+Garside,100,1, 0
+Gaskell,0,0, 1
+Gavey,0,0, 1
+Gee,0,0, 1
+Gheorgheff,0,0, 1
+Giglio,0,0, 1
+Giles,0,0, 1
+Gilinski,0,0, 1
+Gill,0,0, 1
+Gillespie,0,0, 1
+Gilnagh,100,1, 0
+Givard,0,0, 1
+Glynn,100,1, 0
+Goldenberg,100,4, 0
+Goldschmidt,0,0, 1
+Goldsmith,66,6, 3
+Goncalves,0,0, 1
+Goodwin,0,0, 36
+Graham,66,6, 3
+Green,0,0, 1
+Greenberg,0,0, 1
+Greenfield,100,1, 0
+Gronnestad,0,0, 1
+Guggenheim,0,0, 1
+Gustafsson,0,0, 16
+Haas,0,0, 1
+Hagland,0,0, 4
+Hakkarainen,50,2, 2
+Hale,0,0, 1
+Hamalainen,100,4, 0
+Hampe,0,0, 1
+Hanna,0,0, 1
+Hansen,0,0, 9
+Harder,100,1, 0
+Harknett,0,0, 1
+Harmer,0,0, 1
+Harper,75,12, 4
+Harrington,0,0, 1
+Harris,50,8, 8
+Harrison,0,0, 1
+Hart,50,8, 8
+Hassab,100,1, 0
+Hassan,0,0, 1
+Hawksford,100,1, 0
+Hays,100,4, 0
+Healy,100,1, 0
+Hedman,100,1, 0
+Hegarty,0,0, 1
+Heikkinen,100,1, 0
+Heininen,0,0, 1
+Hendekovic,0,0, 1
+Henry,0,0, 1
+Herman,100,4, 0
+Hewlett,100,1, 0
+Hickman,0,0, 9
+Hippach,100,4, 0
+Hirvonen,100,1, 0
+Hocking,50,2, 2
+Hodges,0,0, 1
+Hogeboom,100,1, 0
+Hold,0,0, 1
+Holm,0,0, 1
+Holverson,50,2, 2
+Homer,100,1, 0
+Honkanen,100,1, 0
+Hood,0,0, 1
+Horgan,0,0, 1
+Hosono,100,1, 0
+Hoyt,66,6, 3
+Humblen,0,0, 1
+Hunt,0,0, 1
+Ibrahim Shawah,0,0, 1
+Icard,100,1, 0
+Ilett,100,1, 0
+Ilmakangas,0,0, 1
+Isham,0,0, 1
+Ivanoff,0,0, 1
+Jacobsohn,50,2, 2
+Jalsevac,100,1, 0
+Jansson,100,1, 0
+Jardin,0,0, 1
+Jarvis,0,0, 1
+Jenkin,0,0, 1
+Jensen,0,0, 9
+Jermyn,100,1, 0
+Jerwan,100,1, 0
+Johannesen-Bratthammer,100,1, 0
+Johanson,0,0, 1
+Johansson,0,0, 9
+Johnson,50,18, 18
+Johnston,0,0, 4
+Jonkoff,0,0, 1
+Jonsson,100,1, 0
+Jussila,33,3, 6
+Kallio,0,0, 1
+Kalvik,0,0, 1
+Kantor,50,2, 2
+Karaic,0,0, 1
+Karlsson,0,0, 1
+Karun,100,1, 0
+Kassem,0,0, 1
+Keane,50,2, 2
+Keefe,0,0, 1
+Kelly,75,12, 4
+Kent,0,0, 1
+Kenyon,100,1, 0
+Kiernan,0,0, 1
+Kilgannon,0,0, 1
+Kimball,100,1, 0
+Kink,0,0, 1
+Kink-Heilmann,100,1, 0
+Kirkland,0,0, 1
+Klaber,0,0, 1
+Klasen,0,0, 1
+Knight,0,0, 1
+Kraeff,0,0, 1
+Kvillner,0,0, 1
+Lahoud,0,0, 1
+Lahtinen,0,0, 1
+Laitinen,0,0, 1
+Laleff,0,0, 1
+Lam,50,2, 2
+Landergren,100,1, 0
+Lang,100,1, 0
+Laroche,66,6, 3
+Larsson,0,0, 4
+Leader,100,1, 0
+Leeni,100,1, 0
+Lefebre,0,0, 16
+Lehmann,100,1, 0
+Leinonen,0,0, 1
+Leitch,100,1, 0
+Lemberopolous,0,0, 1
+Lemore,100,1, 0
+Lennon,0,0, 1
+Leonard,0,0, 1
+LeRoy,100,1, 0
+Lester,0,0, 1
+Lesurer,100,1, 0
+Levy,0,0, 1
+Lewy,0,0, 1
+Leyson,0,0, 1
+Lievens,0,0, 1
+Lindahl,0,0, 1
+Lindblom,0,0, 1
+Lindell,0,0, 1
+Lindqvist,100,1, 0
+Lines,100,1, 0
+Ling,0,0, 1
+Lobb,0,0, 4
+Long,0,0, 1
+Longley,100,1, 0
+Louch,100,1, 0
+Lovell,0,0, 1
+Lulic,100,1, 0
+Lundahl,0,0, 1
+Lurette,100,1, 0
+Mack,0,0, 1
+Madigan,100,1, 0
+Madill,100,1, 0
+Madsen,100,1, 0
+Maenpaa,0,0, 1
+Maioni,100,1, 0
+Maisner,0,0, 1
+Mallet,50,2, 2
+Mamee,100,1, 0
+Mangan,0,0, 1
+Mannion,100,1, 0
+Marechal,100,1, 0
+Markoff,0,0, 1
+Markun,0,0, 1
+Marvin,0,0, 1
+Masselmani,100,1, 0
+Matthews,0,0, 1
+Mayne,100,1, 0
+McCarthy,0,0, 1
+McCormack,100,1, 0
+McCoy,100,4, 0
+McDermott,100,1, 0
+McEvoy,0,0, 1
+McGough,100,1, 0
+McGovern,100,1, 0
+McGowan,100,1, 0
+McKane,0,0, 1
+McMahon,0,0, 1
+McNamee,0,0, 1
+Meanwell,0,0, 1
+Meek,0,0, 1
+Mellinger,100,4, 0
+Mellors,100,1, 0
+Meo,0,0, 1
+Mernagh,0,0, 1
+Meyer,33,3, 6
+Millet,0,0, 1
+Milling,0,0, 1
+Minahan,50,2, 2
+Mineff,0,0, 1
+Mionoff,0,0, 1
+Mitchell,0,0, 1
+Mitkoff,0,0, 1
+Mockler,100,1, 0
+Moen,0,0, 1
+Molson,0,0, 1
+Montvila,0,0, 1
+Moor,100,4, 0
+Moore,0,0, 1
+Moran,33,3, 6
+Moraweck,0,0, 1
+Morley,0,0, 4
+Morrow,0,0, 1
+Moss,100,1, 0
+Moubarek,100,4, 0
+Moussa,100,1, 0
+Moutal,0,0, 1
+Mudd,0,0, 1
+Mullens,100,1, 0
+Murdlin,0,0, 1
+Murphy,100,4, 0
+Myhrman,0,0, 1
+Naidenoff,0,0, 1
+Najib,100,1, 0
+Nakid,100,4, 0
+Nankoff,0,0, 1
+Nasser,50,2, 2
+Natsch,0,0, 1
+Navratil,66,6, 3
+Nenkoff,0,0, 1
+Newell,66,6, 3
+Newsom,100,1, 0
+Nicholls,0,0, 1
+Nicholson,0,0, 1
+Nicola-Yarred,100,4, 0
+Nilsson,100,1, 0
+Nirva,0,0, 1
+Niskanen,100,1, 0
+Norman,0,0, 1
+Nosworthy,0,0, 1
+Novel,0,0, 1
+Nye,100,1, 0
+Nysten,100,1, 0
+Nysveen,0,0, 1
+O'Brien,33,3, 6
+O'Connell,0,0, 1
+O'Connor,0,0, 1
+O'Driscoll,100,1, 0
+O'Dwyer,100,1, 0
+O'Leary,100,1, 0
+O'Sullivan,0,0, 1
+Odahl,0,0, 1
+Ohman,100,1, 0
+Olsen,0,0, 9
+Olsson,0,0, 4
+Olsvigen,0,0, 1
+Oreskovic,0,0, 4
+Osen,0,0, 1
+Osman,100,1, 0
+Ostby,0,0, 1
+Otter,0,0, 1
+Padro y Manent,100,1, 0
+Pain,0,0, 1
+Palsson,0,0, 16
+Panula,0,0, 36
+Parkes,0,0, 1
+Parr,0,0, 1
+Parrish,100,1, 0
+Partner,0,0, 1
+Pasic,0,0, 1
+Patchett,0,0, 1
+Paulner,0,0, 1
+Pavlovic,0,0, 1
+Pears,50,2, 2
+Peduzzi,0,0, 1
+Pekoniemi,0,0, 1
+Penasco y Castellana,50,2, 2
+Pengelly,0,0, 1
+Perkin,0,0, 1
+Pernot,0,0, 1
+Perreault,100,1, 0
+Persson,100,1, 0
+Peter,100,4, 0
+Peters,0,0, 1
+Petranec,0,0, 1
+Petroff,0,0, 4
+Petterson,0,0, 1
+Pettersson,0,0, 1
+Peuchen,100,1, 0
+Phillips,100,1, 0
+Pickard,100,1, 0
+Pinsky,100,1, 0
+Plotcharsky,0,0, 1
+Ponesell,0,0, 1
+Porter,0,0, 1
+Potter,100,1, 0
+Quick,100,4, 0
+Radeff,0,0, 1
+Razi,0,0, 1
+Reed,0,0, 1
+Reeves,0,0, 1
+Rekic,0,0, 1
+Renouf,50,2, 2
+Reuchlin,0,0, 1
+Reynaldo,100,1, 0
+Rice,0,0, 25
+Richard,0,0, 1
+Richards,100,9, 0
+Ridsdale,100,1, 0
+Ringhini,0,0, 1
+Rintamaki,0,0, 1
+Risien,0,0, 1
+Robbins,0,0, 1
+Robert,100,1, 0
+Robins,0,0, 1
+Roebling,0,0, 1
+Rogers,0,0, 1
+Romaine,100,1, 0
+Rommetvedt,0,0, 1
+Rood,0,0, 1
+Rosblom,0,0, 4
+Ross,0,0, 1
+Rothes,100,1, 0
+Rothschild,100,1, 0
+Rouse,0,0, 1
+Rugg,100,1, 0
+Rush,0,0, 1
+Ryan,0,0, 1
+Ryerson,100,4, 0
+Saad,0,0, 4
+Saalfeld,100,1, 0
+Sadlier,0,0, 1
+Sage,0,0, 49
+Sagesser,100,1, 0
+Salkjelsvik,100,1, 0
+Salonen,0,0, 1
+Samaan,0,0, 1
+Sandstrom,100,4, 0
+Saundercock,0,0, 1
+Sawyer,0,0, 1
+Scanlan,0,0, 1
+Sdycoff,0,0, 1
+Sedgwick,0,0, 1
+Serepeca,100,1, 0
+Seward,100,1, 0
+Sharp,0,0, 1
+Sheerlinck,100,1, 0
+Shellard,0,0, 1
+Shelley,100,1, 0
+Shorney,0,0, 1
+Shutes,100,1, 0
+Silven,100,1, 0
+Silverthorne,100,1, 0
+Silvey,50,2, 2
+Simmons,0,0, 1
+Simonius-Blumer,100,1, 0
+Sinkkonen,100,1, 0
+Sirayanian,0,0, 1
+Sirota,0,0, 1
+Sivic,0,0, 1
+Sivola,0,0, 1
+Sjoblom,100,1, 0
+Sjostedt,0,0, 1
+Skoog,0,0, 36
+Slabenoff,0,0, 1
+Slayter,100,1, 0
+Slemen,0,0, 1
+Slocovski,0,0, 1
+Sloper,100,1, 0
+Smart,0,0, 1
+Smiljanic,0,0, 1
+Smith,25,4, 12
+Sobey,0,0, 1
+Soholt,0,0, 1
+Somerton,0,0, 1
+Spedden,100,1, 0
+Spencer,100,1, 0
+Stahelin-Maeglin,100,1, 0
+Staneff,0,0, 1
+Stankovic,0,0, 1
+Stanley,50,2, 2
+Stead,0,0, 1
+Stephenson,100,1, 0
+Stewart,0,0, 1
+Stone,100,1, 0
+Stoytcheff,0,0, 1
+Strandberg,0,0, 1
+Stranden,100,1, 0
+Strom,0,0, 4
+Sunderland,100,1, 0
+Sundman,100,1, 0
+Sutehall,0,0, 1
+Sutton,0,0, 1
+Svensson,0,0, 4
+Swift,100,1, 0
+Taussig,66,6, 3
+Taylor,100,4, 0
+Thayer,66,6, 3
+Theobald,0,0, 1
+Thomas,100,1, 0
+Thorne,100,1, 0
+Thorneycroft,50,2, 2
+Tikkanen,0,0, 1
+Tobin,0,0, 1
+Todoroff,0,0, 1
+Tomlin,0,0, 1
+Toomey,100,1, 0
+Torber,0,0, 1
+Tornquist,100,1, 0
+Toufik,0,0, 1
+Touma,100,1, 0
+Troupiansky,0,0, 1
+Trout,100,1, 0
+Troutt,100,1, 0
+Turcin,0,0, 1
+Turja,100,1, 0
+Turkula,100,1, 0
+Turpin,0,0, 4
+Uruchurtu,0,0, 1
+van Billiard,0,0, 1
+Van der hoef,0,0, 1
+Van Impe,0,0, 9
+van Melkebeke,0,0, 1
+Vande Velde,0,0, 1
+Vande Walle,0,0, 1
+Vanden Steen,0,0, 1
+Vander Cruyssen,0,0, 1
+Vander Planke,0,0, 9
+Vestrom,0,0, 1
+Vovk,0,0, 1
+Waelens,0,0, 1
+Walker,0,0, 1
+Ward,100,1, 0
+Warren,100,1, 0
+Watson,0,0, 1
+Watt,100,1, 0
+Webber,50,2, 2
+Weir,0,0, 1
+Weisz,100,1, 0
+Wells,100,1, 0
+West,66,6, 3
+Wheadon,0,0, 1
+White,0,0, 4
+Wick,100,4, 0
+Widegren,0,0, 1
+Widener,0,0, 1
+Wiklund,0,0, 1
+Wilhelms,100,1, 0
+Willey,0,0, 1
+Williams,25,4, 12
+Williams-Lambert,0,0, 1
+Windelov,0,0, 1
+Wiseman,0,0, 1
+Woolner,100,1, 0
+Wright,0,0, 1
+Yasbeck,50,2, 2
+Young,100,1, 0
+Youseff,0,0, 1
+Yousif,0,0, 1
+Yousseff,0,0, 1
+Yrois,0,0, 1
+Zabour,0,0, 4
+Zimmerman,0,0, 1
