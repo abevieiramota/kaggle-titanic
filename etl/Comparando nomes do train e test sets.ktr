@@ -73,6 +73,27 @@
     <is_key_private>N</is_key_private>
   </info>
   <notepads>
+    <notepad>
+      <note>percebi agora que esse processamento depende do train_final.csv&#x28;precisa de FamilyName&#x29;&#xd;&#xa;e que para gerar o train_final.csv preciso desse processamento&#xd;&#xa;hohohohohohohohohohhohoohhohoo&#x28;funciona porque j&#xe1; existia um train_final e test_final antes&#x29;</note>
+      <xloc>480</xloc>
+      <yloc>16</yloc>
+      <width>529</width>
+      <heigth>58</heigth>
+      <fontname>Segoe UI</fontname>
+      <fontsize>9</fontsize>
+      <fontbold>N</fontbold>
+      <fontitalic>N</fontitalic>
+      <fontcolorred>0</fontcolorred>
+      <fontcolorgreen>0</fontcolorgreen>
+      <fontcolorblue>0</fontcolorblue>
+      <backgroundcolorred>255</backgroundcolorred>
+      <backgroundcolorgreen>205</backgroundcolorgreen>
+      <backgroundcolorblue>112</backgroundcolorblue>
+      <bordercolorred>100</bordercolorred>
+      <bordercolorgreen>100</bordercolorgreen>
+      <bordercolorblue>100</bordercolorblue>
+      <drawshadow>Y</drawshadow>
+    </notepad>
   </notepads>
   <order>
   <hop> <from>Select values</from><to>Cartesiano</to><enabled>Y</enabled> </hop>
@@ -680,6 +701,20 @@
 <grouping_symbol/>
 <currency_symbol/>
 </calculation>
+       <calculation><field_name>sobreviveu_menos_morreu</field_name>
+<calc_type>SUBTRACT</calc_type>
+<field_a>sobreviveu</field_a>
+<field_b>nao_sobreviveu</field_b>
+<field_c/>
+<value_type>None</value_type>
+<value_length>-1</value_length>
+<value_precision>-1</value_precision>
+<remove>N</remove>
+<conversion_mask/>
+<decimal_symbol/>
+<grouping_symbol/>
+<currency_symbol/>
+</calculation>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
       <xloc>768</xloc>
@@ -798,12 +833,24 @@
       <field>
         <name>nFamilyDied</name>
         <type>Integer</type>
-        <format/>
+        <format>0</format>
+        <currency/>
+        <decimal>,</decimal>
+        <group>.</group>
+        <nullif/>
+        <trim_type>both</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>nSurvivedMinusNotSurvived</name>
+        <type>Number</type>
+        <format>0.&#x23;&#x23;&#x23;&#x23;&#x23;</format>
         <currency/>
         <decimal/>
         <group/>
         <nullif/>
-        <trim_type>none</trim_type>
+        <trim_type>both</trim_type>
         <length>-1</length>
         <precision>-1</precision>
       </field>
@@ -1021,7 +1068,7 @@
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
       <xloc>288</xloc>
       <yloc>800</yloc>
-      <draw>N</draw>
+      <draw>Y</draw>
       </GUI>
     </step>
 
@@ -1137,6 +1184,10 @@
         <precision>-2</precision>
       </field>      <field>        <name>nao_sobreviveu</name>
         <rename>nFamilyDied</rename>
+        <length>-2</length>
+        <precision>-2</precision>
+      </field>      <field>        <name>sobreviveu_menos_morreu</name>
+        <rename>nSurvivedMinusNotSurvived</rename>
         <length>-2</length>
         <precision>-2</precision>
       </field>        <select_unspecified>N</select_unspecified>

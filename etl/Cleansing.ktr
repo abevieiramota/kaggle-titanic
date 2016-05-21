@@ -445,7 +445,18 @@
       <field>
         <name>nFamilyDied</name>
         <type>Integer</type>
-        <format> &#x23;</format>
+        <format>&#x23;</format>
+        <currency>R&#x24;</currency>
+        <decimal>,</decimal>
+        <group>.</group>
+        <length>15</length>
+        <precision>0</precision>
+        <trim_type>none</trim_type>
+      </field>
+      <field>
+        <name>nSurvivedMinusNotSurvived</name>
+        <type>Integer</type>
+        <format>&#x23;</format>
         <currency>R&#x24;</currency>
         <decimal>,</decimal>
         <group>.</group>
@@ -2078,6 +2089,12 @@
         <default>4</default>
         <type>Integer</type>
       </value>
+      <value>
+        <name>nSurvivedMinusNotSurvived</name>
+        <rename>nSurvivedMinusNotSurvived</rename>
+        <default/>
+        <type>None</type>
+      </value>
     </lookup>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
@@ -2125,6 +2142,12 @@
         <rename>nFamilyDied</rename>
         <default>4</default>
         <type>Integer</type>
+      </value>
+      <value>
+        <name>nSurvivedMinusNotSurvived</name>
+        <rename>nSurvivedMinusNotSurvived</rename>
+        <default/>
+        <type>None</type>
       </value>
     </lookup>
      <cluster_schema/>
@@ -2776,6 +2799,18 @@
         <length>-1</length>
         <precision>-1</precision>
       </field>
+      <field>
+        <name>nSurvivedMinusNotSurvived</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
     </fields>
      <cluster_schema/>
  <remotesteps>   <input>   </input>   <output>   </output> </remotesteps>    <GUI>
@@ -3118,6 +3153,18 @@
       </field>
       <field>
         <name>nFamilyDied</name>
+        <type>Integer</type>
+        <format/>
+        <currency/>
+        <decimal/>
+        <group/>
+        <nullif/>
+        <trim_type>none</trim_type>
+        <length>-1</length>
+        <precision>-1</precision>
+      </field>
+      <field>
+        <name>nSurvivedMinusNotSurvived</name>
         <type>Integer</type>
         <format/>
         <currency/>
